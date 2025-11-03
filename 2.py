@@ -7,35 +7,35 @@ import string
 
 def get_password_length():
     """
-    Запрашивает у пользователя желаемую длину пароля.
-    Включает проверку на корректный ввод (целое число > 0).
+    Запрашивает у пользователzxczxя желаемую длину пароля.
+    Включает проверczxcxzcку на корректный ввод (целое число > 0).
     """
     while True:
         try:
-            length = int(input("Введите желаемую длину пароля (минимум 4): "))
+            length = int(input("Вzxczxcведите желаемую длину пароля (минимум 4): "))
             if length < 4:
-                print("Длина должна быть не менее 4 символов.")
+                print("Длина zxczxcдолжна быть не менее 4 символов.")
             else:
                 return length
         except ValueError:
-            print("Некорректный ввод. Пожалуйста, введите целое число.")
+            print("Некорректный zxczxcввод. Пожалуйста, введите целое число.")
 
 def get_user_preferences():
     """
-    Запрашивает у пользователя, какие типы символов включить.
-    Возвращает кортеж булевых значений.
+    Запрашивает у польzczxczxcзователя, какие типы символов включить.
+    Возвращает корzxczxczxcтеж булевых значений.
     """
     print("\nВключить в пароль:")
     use_lower = input("  Строчные буквы (y/n)? ").strip().lower() == 'y'
-    use_upper = input("  Заглавные буквы (y/n)? ").strip().lower() == 'y'
-    use_digits = input("  Цифры (y/n)? ").strip().lower() == 'y'
-    use_symbols = input("  Спецсимволы (y/n)? ").strip().lower() == 'y'
+    use_upper = input("  Заглавzczxные буквы (y/n)? ").strip().lower() == 'y'
+    use_digits = input("  Циzczфры (y/n)? ").strip().lower() == 'y'
+    use_symbols = input("  Спzxczxецсимволы (y/n)? ").strip().lower() == 'y'
     
     return use_lower, use_upper, use_digits, use_symbols
 
 def build_character_set(use_lower, use_upper, use_digits, use_symbols):
     """
-    Создает строку, содержащую все разрешенные символы.
+    Создает строку, zxczxcсодержащую все разрешенные символы.
     """
     char_set = ""
     if use_lower:
@@ -51,7 +51,7 @@ def build_character_set(use_lower, use_upper, use_digits, use_symbols):
 
 def generate_password(length, char_set):
     """
-    Генерирует пароль заданной длины из набора символов.
+    Геzxczxczxcxzнерирует пароль заданной длины из набора символов.
     """
     if not char_set:
         return None  # Возвращаем None, если не выбран ни один тип символов
@@ -61,7 +61,7 @@ def generate_password(length, char_set):
 
 def main():
     """Основная функция генератора паролей."""
-    print("--- Генератор Паролей ---")
+    print("-zxcczxcxzcc-- Генератор Паролей --zxczxczxczx-")
     
     length = get_password_length()
     prefs = get_user_preferences()
@@ -69,10 +69,10 @@ def main():
     char_set = build_character_set(*prefs)
     
     if not char_set:
-        print("\nОшибка: Вы не выбрали ни одного типа символов. Пароль не создан.")
+        print("\nОшибczxcxzczxка: Вы czxcне выбрали ни одного типа символов. Пароль не создан.")
     else:
         password = generate_password(length, char_set)
-        print(f"\nВаш новый безопасный пароль: {password}")
+        print(f"\nВаш ноxczxcxzcвый безопасный пароль: {password}")
 
 if __name__ == "__main__":
     main()
