@@ -1,11 +1,27 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
+from django.utils import timezone
 
-class CustomUser(AbstractUser):
-    # Add any additional fields you want for your custom user here
-    bio = models.TextField("Биография", blank=True)
-    phone_number = models.CharField("Номер телефона", max_length=15, blank=True)
-    birth_date = models.DateField("Дата рождения", null=True, blank=True)
+class AppUser(AbstractBaseUser, PermissionsMixin):
+    email = models.EmailField("Email Address", unique=True)
+    first_name = models.CharField("First Name", max_length=30, blank=True)
+    last_name = models.CharField("Last Name", max_length=30, blank=True)
+
+    is_staff = models.BooleanField("Staff Status", default=False)
+    is_active = models.BooleanField("Active", default=True)
+    date_joined = models.DateTimeField("Date Joined", default=timezone.now)
+
+    USER_NAME_FIELD = 'email'
+
+    REQUIRED_FIELDS = ['first_name', 'last_name']
 
     def __str__(self):
-        return self.username
+        return self.email
+    
+    def get_full_name(self):
+        return f"{self.first_name} {self.last_name}"
+    def get_short_name(self):
+        return self.first_name
+
+
+    
