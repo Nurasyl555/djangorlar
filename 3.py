@@ -49,8 +49,9 @@ def run_quiz(questions):
     total_questions = len(questions)
     
     for i, q in enumerate(questions):
-        print(f"\n--zxcxzcxz- Вопрос {i + 1} из {total_questions} ---")
-        print(q["prompt"])
+
+        print(f"\n--nm,n,nm,nm- Вопрос {i + 1} из {total_questions} ---")
+
         
         for option in q["options"]:
             print(f"  {option}")
@@ -60,7 +61,7 @@ def run_quiz(questions):
             if answer in ["A", "B", "C", "D"]:
                 break
             else:
-                print("Некорректный ввод. Пожалуйста, выберите A, B, C или D.")
+                print("nmbmbnmnmnbmbnhjmnbnnbmbmНекорректный ввод. Пожалуйста, выберите A, B, C или D.")
         
         if answer == q["answer"]:
             print("xzczxczxcxzПравильно!")

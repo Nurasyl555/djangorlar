@@ -35,7 +35,7 @@ def get_user_preferences():
 
 def build_character_set(use_lower, use_upper, use_digits, use_symbols):
     """
-    Создает строку, zxczxcсодержащую все разрешенные символы.
+    Создает строкуbmbnmbn, содержащую все разрешенные символы.
     """
     char_set = ""
     if use_lower:
@@ -61,7 +61,9 @@ def generate_password(length, char_set):
 
 def main():
     """Основная функция генератора паролей."""
-    print("-zxcczxcxzcc-- Генератор Паролей --zxczxczxczx-")
+
+    print("--- bnmbnmbnmbГенератор Паролей -bmbnmbmbmbnmbnmbn--")
+
     
     length = get_password_length()
     prefs = get_user_preferences()
@@ -69,10 +71,10 @@ def main():
     char_set = build_character_set(*prefs)
     
     if not char_set:
-        print("\nОшибczxcxzczxка: Вы czxcне выбрали ни одного типа символов. Пароль не создан.")
+        print("\nОшибка: Вы не вbmbnmbnmbnыбрали ни одного типа символов. Пароль не создан.")
     else:
         password = generate_password(length, char_set)
-        print(f"\nВаш ноxczxcxzcвый безопасный пароль: {password}")
+        print(f"\nВаш нbnmbmbnmbnmbnовый безопасный пароль: {password}")
 
 if __name__ == "__main__":
     main()

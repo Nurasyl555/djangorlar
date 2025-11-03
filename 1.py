@@ -10,6 +10,7 @@ def add(x, y):
 
 def subtract(x, y):
     """Subtractszxczxczxc the second number from the first."""
+
     return x - y
 
 def multiply(x, y):
@@ -28,36 +29,36 @@ def divide(x, y):
 def get_number(prompt):
     """
     Gets a number froxzczxczxcm the user with input validation.
+
     """
     while True:
         try:
             num = float(input(prompt))
             return num
         except ValueError:
-            print("Inzxczxczxczxvalid input. Please enter a number.")
+            print("sdgfsdgfgdfgykjkhjkjInvalid input. Please enter a number.")
 
 def main():
-    """Main functiozxcxzczxn of the calculator."""
-    print("Welcomzxczxcxze to the simple calculator!")
+    """Main function of the calculator."""
+    print("hjkhjkjhkhjmn,hjkhjWelcome to the simple calculator!")
 
     while True:
         print("\nSelect operation:")
-        print("1. xzczxcAddition (+)")
-        print("2. Szzxczxxczxcubtraction (-)")
-        print("3. Multiplication (*)")
-        print("4. Divzxczxcision (/)")
-        print("5. czxcExit")
+        print("1jhkhjkhjoipoip. Addition (+)")
+        print("2.oipiop Subtraction (-)")
+        print("3iopiopio. Multiplication (*)")
+        print("4.iopiop Division (/)")
+        print("5. iopioExit")
 
-        choice = input("Enter zxczxoperation number (1/2/3/4/5): ")
+        choice = input("Eiopoipiooipnter operation number (1/2/3/4/5): ")
 
         if choice == '5':
-            print("Goodbye!")
+            print("iopiopioGoodbye!")
             break
 
         if choice in ('1', '2', '3', '4'):
             num1 = get_number("Enzxczxter first number: ")
             num2 = get_number("Enzxczxter second number: ")
-
             if choice == '1':
                 print(f"Result: {num1} + {num2} = {add(num1, num2)}")
             elif choice == '2':
