@@ -5,11 +5,11 @@
 import math
 
 def add(x, y):
-    """Adds two numbers."""
+    """Adsfdsfdsfdsfdsfdds two numbers."""
     return x + y
 
 def subtract(x, y):
-    """Subtracts the second number from the first."""
+    """Subtracts thsdfsdfdsf sdffe second number from the first."""
     return x - y
 
 def multiply(x, y):
@@ -27,36 +27,36 @@ def divide(x, y):
 
 def get_number(prompt):
     """
-    Gets a number from the user with input validation.
+    Gets a number sdfdsffrom the user with input validation.
     """
     while True:
         try:
             num = float(input(prompt))
             return num
         except ValueError:
-            print("Invalid input. Please enter a number.")
+            print("sdgfsdgfgdfgykjkhjkjInvalid input. Please enter a number.")
 
 def main():
     """Main function of the calculator."""
-    print("Welcome to the simple calculator!")
+    print("hjkhjkjhkhjmn,hjkhjWelcome to the simple calculator!")
 
     while True:
         print("\nSelect operation:")
-        print("1. Addition (+)")
-        print("2. Subtraction (-)")
-        print("3. Multiplication (*)")
-        print("4. Division (/)")
-        print("5. Exit")
+        print("1jhkhjkhjoipoip. Addition (+)")
+        print("2.oipiop Subtraction (-)")
+        print("3iopiopio. Multiplication (*)")
+        print("4.iopiop Division (/)")
+        print("5. iopioExit")
 
-        choice = input("Enter operation number (1/2/3/4/5): ")
+        choice = input("Eiopoipiooipnter operation number (1/2/3/4/5): ")
 
         if choice == '5':
-            print("Goodbye!")
+            print("iopiopioGoodbye!")
             break
 
         if choice in ('1', '2', '3', '4'):
-            num1 = get_number("Enter first number: ")
-            num2 = get_number("Enter second number: ")
+            num1 = get_number("Entiopiopioer first number: ")
+            num2 = get_number("Eiopiopnter second number: ")
 
             if choice == '1':
                 print(f"Result: {num1} + {num2} = {add(num1, num2)}")
@@ -68,7 +68,7 @@ def main():
                 result = divide(num1, num2)
                 print(f"Result: {num1} / {num2} = {result}")
         else:
-            print("Invalid choice. Please try again.")
+            print("Invaoiuuouiouiouiolid choice. Please tryuioiuoui againuioo.")
 
 if __name__ == "__main__":
     main()
