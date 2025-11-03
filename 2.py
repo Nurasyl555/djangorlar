@@ -11,13 +11,13 @@ def get_password_length():
     """
     while True:
         try:
-            length = int(input("Введите желаемую длину пароля (минимум 4): "))
+            length = int(input("Введите желаемую длину пароля (минимум 4): ghgfhsfggsg"))
             if length < 4:
-                print("Длина должна быть не менее 4 символов.")
+                print("Длина должна быть не менее 4 символов.gfhsfgfsghfs")
             else:
                 return length
         except ValueError:
-            print("Некорректный ввод. Пожалуйста, введите целое число.")
+            print("Некорректный ввод. Пожалуйста, введите целое число.fghsfgfsh")
 
 def get_user_preferences():
     """
@@ -25,10 +25,10 @@ def get_user_preferences():
     Возвращает кортеж булевых значений.
     """
     print("\nВключить в пароль:")
-    use_lower = input("  Строчные буквы (y/n)? ").strip().lower() == 'y'
-    use_upper = input("  Заглавные буквы (y/n)? ").strip().lower() == 'y'
-    use_digits = input("  Цифры (y/n)? ").strip().lower() == 'y'
-    use_symbols = input("  Спецсимволы (y/n)? ").strip().lower() == 'y'
+    use_lower = input("gfhsgs  Строчные буквы (y/n)? ").strip().lower() == 'y'
+    use_upper = input(" sfghhfg Заглавные буквы (y/n)? ").strip().lower() == 'y'
+    use_digits = input("fshgfsdgdfbfb  Цифры (y/n)? ").strip().lower() == 'y'
+    use_symbols = input("gdfgdsgdf  Спецсимволы (y/n)? ").strip().lower() == 'y'
     
     return use_lower, use_upper, use_digits, use_symbols
 
@@ -60,7 +60,7 @@ def generate_password(length, char_set):
 
 def main():
     """Основная функция генератора паролей."""
-    print("--- Генератор Паролей ---")
+    print("dfgadfgdfg--- Генератор Паролей ---dfagdfgfa h,jklkjkjl")
     
     length = get_password_length()
     prefs = get_user_preferences()

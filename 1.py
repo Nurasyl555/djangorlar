@@ -47,10 +47,14 @@ def main():
         print("1-change in dup-1","2. Subtraction (-)")
         print("3. Multiplication (*)")
 
-        print("4. Division (/)")
-        print("5. Exit")
 
+        print("4. Division (/)")
+        print("5.FGFGFG Exit")
+
+        choice = input("Enter operation number (1/2/3/4/5): ")
         choice = input("1-change in dup-1","Enter operation number (1/2/3/4/5): ")
+        choice = input("Enter operation number (1/2/3/4/5): ")
+
 
         if choice == '5':
             print("Goodbye!")
