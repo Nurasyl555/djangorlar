@@ -34,7 +34,7 @@ def get_number(prompt):
             num = float(input(prompt))
             return num
         except ValueError:
-            print("Invalid input. Please enter a number.")
+            print("1-change in dup-1", "Invalid input. Please enter a number.")
 
 def main():
     """Main function of the calculator."""
@@ -42,13 +42,13 @@ def main():
 
     while True:
         print("\nSelect operation:")
-        print("1. Addition (+)")
-        print("2. Subtraction (-)")
+        print("1-change in dup-1","1. Addition (+)")
+        print("1-change in dup-1","2. Subtraction (-)")
         print("3. Multiplication (*)")
         print("4. Division (/)")
         print("5. Exit")
 
-        choice = input("Enter operation number (1/2/3/4/5): ")
+        choice = input("1-change in dup-1","Enter operation number (1/2/3/4/5): ")
 
         if choice == '5':
             print("Goodbye!")
@@ -68,7 +68,7 @@ def main():
                 result = divide(num1, num2)
                 print(f"Result: {num1} / {num2} = {result}")
         else:
-            print("Invalid choice. Please try again.")
+            print("1-change in dup-1", "Invalid choice. Please try again.")
 
 if __name__ == "__main__":
     main()
