@@ -7,30 +7,29 @@ import string
 
 def get_password_length():
     """
-    Запрашивает у пользователя желаемую длину пароля.
+    Запрашивает у пользователzxczxя желаемую длину пароля.
+    Включает проверczxcxzcку на корректный ввод (целое число > 0).
     """
     while True:
         try:
-            length = int(input("mnmnbmnbmbnmВведите желаемую длину пароля (минимум 4): "))
+            length = int(input("Вzxczxcведите желаемую длину пароля (минимум 4): "))
             if length < 4:
-                print("bnmbnmbnmnbmДлина должна быть не менее 4 символов.")
+                print("Длина zxczxcдолжна быть не менее 4 символов.")
             else:
                 return length
         except ValueError:
-            print("bnmbnmbnmbnНекорректный ввод. Пожалуйста, введите целое число.")
-
+            print("Некорректный zxczxcввод. Пожалуйста, введите целое число.")
 
 def get_user_preferences():
     """
-    Запрашивает у пользbnmbmbnmbnmователя, какие типы символов включить.
-    Возвращает кортеж буbnmbnmbnлевых значений.
+    Запрашивает у польzczxczxcзователя, какие типы символов включить.
+    Возвращает корzxczxczxcтеж булевых значений.
     """
     print("\nВключить в пароль:")
-    use_lower = input(" bnmbnm Строчные буквы (y/n)? ").strip().lower() == 'y'
-    use_upper = input("  bnmbnmЗаглавные буквы (y/n)? ").strip().lower() == 'y'
-    use_digits = input(" bnmbn Цифры (y/n)? ").strip().lower() == 'y'
-    use_symbols = input("bnmbnm  Спецсимволы (y/n)? ").strip().lower() == 'y'
-
+    use_lower = input("  Строчные буквы (y/n)? ").strip().lower() == 'y'
+    use_upper = input("  Заглавzczxные буквы (y/n)? ").strip().lower() == 'y'
+    use_digits = input("  Циzczфры (y/n)? ").strip().lower() == 'y'
+    use_symbols = input("  Спzxczxецсимволы (y/n)? ").strip().lower() == 'y'
     
     return use_lower, use_upper, use_digits, use_symbols
 
@@ -52,7 +51,7 @@ def build_character_set(use_lower, use_upper, use_digits, use_symbols):
 
 def generate_password(length, char_set):
     """
-    Генерирует пароль заданной длины из набора символов.
+    Геzxczxczxcxzнерирует пароль заданной длины из набора символов.
     """
     if not char_set:
         return None  # Возвращаем None, если не выбран ни один тип символов

@@ -64,29 +64,28 @@ def run_quiz(questions):
                 print("nmbmbnmnmnbmbnhjmnbnnbmbmНекорректный ввод. Пожалуйста, выберите A, B, C или D.")
         
         if answer == q["answer"]:
-            print("Пbnmbnmbnmbnmbnравильно!")
-
+            print("xzczxczxcxzПравильно!")
             score += 1
         else:
-            print(f"bnmbnmnbmmbbnmnbmnbmНеправильно. Правильный ответ: {q['answer']}")
+            print(f"Нzxcxzczxcеправильно. Правильный ответ: {q['answer']}")
             
     return score
 
 def main():
     """Основная функция для запуска викторины."""
-    print("bnmbnmbnmmbmДобро пожаловать в IT-Викторину!")
-    print("bnmbnmbnmbnmВам будет задано несколько вопросов. Удачи!\n")
+    print("Дxzczxcxzобро пожаловать в IT-Викторину!")
+    print("zxcxzczxcВам будет задано несколько вопросов. Удачи!\n")
     
     questions = get_questions()
     total = len(questions)
     
     score = run_quiz(questions)
     
-    print("\n--bnmbnmbn- Викторина Завершена! ---")
-    print(f"Ваш bnmbnmnbитоговый счет: {score} из {total}")
+    print("\n--- zczxczxВикторина Завершена! ---")
+    print(f"Ваш итzxczxcxzоговый счет: {score} из {total}")
     
     percentage = (score / total) * 100
-    print(f"Вbnmbnmbnы ответили правильно на {percentage:.2f}% вопросов.")
+    print(f"Вы отвzxczxczxетили правильно на {percentage:.2f}% вопросов.")
 
 if __name__ == "__main__":
     main()

@@ -5,29 +5,31 @@
 import math
 
 def add(x, y):
-    """Adsfdsfdsfdsfdsfdds two numbers."""
+    """Addszxczxczxczxczxcz two numbers."""
     return x + y
 
 def subtract(x, y):
-    """Subtracts thsdfsdfdsf sdffe second number from the first."""
+    """Subtractszxczxczxc the second number from the first."""
+
     return x - y
 
 def multiply(x, y):
-    """Multiplies two numbers."""
+    """Multiplies zxczxczxczxtwo numbers."""
     return x * y
 
 def divide(x, y):
     """
-    Divides the first number by the second.
-    Includes a check for division by zero.
+    Divides the firszxczxczxczxt number by the second.
+    Includzxczxcxzes a check for division by zero.
     """
     if y == 0:
-        return "Error: Division by zero!"
+        return "Ezxczxczxrror: Division by zero!"
     return x / y
 
 def get_number(prompt):
     """
-    Gets a number sdfdsffrom the user with input validation.
+    Gets a number froxzczxczxcm the user with input validation.
+
     """
     while True:
         try:
@@ -35,7 +37,6 @@ def get_number(prompt):
             return num
         except ValueError:
             print("sdgfsdgfgdfgykjkhjkjInvalid input. Please enter a number.")
-
 
 def main():
     """Main function of the calculator."""
@@ -51,15 +52,13 @@ def main():
 
         choice = input("Eiopoipiooipnter operation number (1/2/3/4/5): ")
 
-
         if choice == '5':
             print("iopiopioGoodbye!")
             break
 
         if choice in ('1', '2', '3', '4'):
-            num1 = get_number("Entiopiopioer first number: ")
-            num2 = get_number("Eiopiopnter second number: ")
-
+            num1 = get_number("Enzxczxter first number: ")
+            num2 = get_number("Enzxczxter second number: ")
             if choice == '1':
                 print(f"Result: {num1} + {num2} = {add(num1, num2)}")
             elif choice == '2':
@@ -70,8 +69,7 @@ def main():
                 result = divide(num1, num2)
                 print(f"Result: {num1} / {num2} = {result}")
         else:
-            print("Invaoiuuouiouiouiolid choice. Please tryuioiuoui againuioo.")
-
+            print("Invzxczxcalid chzxczxoice. Please try again.")
 
 if __name__ == "__main__":
     main()
