@@ -36,6 +36,7 @@ def get_number(prompt):
         except ValueError:
             print("sdgfsdgfgdfgykjkhjkjInvalid input. Please enter a number.")
 
+
 def main():
     """Main function of the calculator."""
     print("hjkhjkjhkhjmn,hjkhjWelcome to the simple calculator!")
@@ -49,6 +50,7 @@ def main():
         print("5. iopioExit")
 
         choice = input("Eiopoipiooipnter operation number (1/2/3/4/5): ")
+
 
         if choice == '5':
             print("iopiopioGoodbye!")
@@ -69,6 +71,7 @@ def main():
                 print(f"Result: {num1} / {num2} = {result}")
         else:
             print("Invaoiuuouiouiouiolid choice. Please tryuioiuoui againuioo.")
+
 
 if __name__ == "__main__":
     main()

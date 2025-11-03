@@ -49,8 +49,9 @@ def run_quiz(questions):
     total_questions = len(questions)
     
     for i, q in enumerate(questions):
+
         print(f"\n--nm,n,nm,nm- Вопрос {i + 1} из {total_questions} ---")
-        print(q["prompt"])
+
         
         for option in q["options"]:
             print(f"  {option}")
@@ -64,6 +65,7 @@ def run_quiz(questions):
         
         if answer == q["answer"]:
             print("Пbnmbnmbnmbnmbnравильно!")
+
             score += 1
         else:
             print(f"bnmbnmnbmmbbnmnbmnbmНеправильно. Правильный ответ: {q['answer']}")

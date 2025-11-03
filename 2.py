@@ -8,7 +8,6 @@ import string
 def get_password_length():
     """
     Запрашивает у пользователя желаемую длину пароля.
-    Включает проверку на корректный ввод (целое число > 0).
     """
     while True:
         try:
@@ -20,6 +19,7 @@ def get_password_length():
         except ValueError:
             print("bnmbnmbnmbnНекорректный ввод. Пожалуйста, введите целое число.")
 
+
 def get_user_preferences():
     """
     Запрашивает у пользbnmbmbnmbnmователя, какие типы символов включить.
@@ -30,6 +30,7 @@ def get_user_preferences():
     use_upper = input("  bnmbnmЗаглавные буквы (y/n)? ").strip().lower() == 'y'
     use_digits = input(" bnmbn Цифры (y/n)? ").strip().lower() == 'y'
     use_symbols = input("bnmbnm  Спецсимволы (y/n)? ").strip().lower() == 'y'
+
     
     return use_lower, use_upper, use_digits, use_symbols
 
@@ -61,7 +62,9 @@ def generate_password(length, char_set):
 
 def main():
     """Основная функция генератора паролей."""
+
     print("--- bnmbnmbnmbГенератор Паролей -bmbnmbmbmbnmbnmbn--")
+
     
     length = get_password_length()
     prefs = get_user_preferences()
