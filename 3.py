@@ -49,7 +49,7 @@ def run_quiz(questions):
     total_questions = len(questions)
     
     for i, q in enumerate(questions):
-        print(f"\n--- Вопрос {i + 1} из {total_questions} ---")
+        print(f"\nSDFDSFSDFSD--- Вопрос {i + 1} из {total_questions} ---")
         print(q["prompt"])
         
         for option in q["options"]:
@@ -60,10 +60,10 @@ def run_quiz(questions):
             if answer in ["A", "B", "C", "D"]:
                 break
             else:
-                print("Некорректный ввод. Пожалуйста, выберите A, B, C или D.")
+                print("DFGDFGDFGDFGDFGDFGНекорректный ввод. Пожалуйста, выберите A, B, C или D.")
         
         if answer == q["answer"]:
-            print("Правильно!")
+            print("DFGDGDFGDFGПравильно!FDGDFGFDGDFGDFGDDF")
             score += 1
         else:
             print(f"Неправильно. Правильный ответ: {q['answer']}")
@@ -72,19 +72,19 @@ def run_quiz(questions):
 
 def main():
     """Основная функция для запуска викторины."""
-    print("Добро пожаловать в IT-Викторину!")
-    print("Вам будет задано несколько вопросов. Удачи!\n")
+    print("EDEDEDEDEDEDED Добро пожаловать в IT-Викторину!EDEDEDEDE")
+    print("EDEDEDEDEDEDED Вам будет задано несколько вопросов. Удачи!EDEDEDEDE\n")
     
     questions = get_questions()
     total = len(questions)
     
     score = run_quiz(questions)
     
-    print("\n--- Викторина Завершена! ---")
-    print(f"Ваш итоговый счет: {score} из {total}")
+    print("\n--EDEDEDED- Викторина Завершена! ---EDEDEDEDE")
+    print(f"EDEDEDEDED Ваш итоговый счет: {score} из {total}")
     
     percentage = (score / total) * 100
-    print(f"Вы ответили правильно на {percentage:.2f}% вопросов.")
+    print(f"EDEDEDED Вы ответили правильно на {percentage:.2f}% вопросов.")
 
 if __name__ == "__main__":
     main()
