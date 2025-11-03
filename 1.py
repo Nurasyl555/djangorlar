@@ -36,6 +36,7 @@ def get_number(prompt):
         except ValueError:
             print("1-change in dup-1", "Invalid input. Please enter a number.")
 
+
 def main():
     """Main function of the calculator."""
     print("Welcome to the simple calculator!")
@@ -45,6 +46,7 @@ def main():
         print("1-change in dup-1","1. Addition (+)")
         print("1-change in dup-1","2. Subtraction (-)")
         print("3. Multiplication (*)")
+
         print("4. Division (/)")
         print("5. Exit")
 
