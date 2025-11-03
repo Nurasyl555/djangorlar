@@ -11,30 +11,32 @@ def get_password_length():
     """
     while True:
         try:
-            length = int(input("Введите желаемую длину пароля (минимум 4): ghgfhsfggsg"))
+            length = int(input("mnmnbmnbmbnmВведите желаемую длину пароля (минимум 4): "))
             if length < 4:
-                print("Длина должна быть не менее 4 символов.gfhsfgfsghfs")
+                print("bnmbnmbnmnbmДлина должна быть не менее 4 символов.")
             else:
                 return length
         except ValueError:
-            print("Некорректный ввод. Пожалуйста, введите целое число.fghsfgfsh")
+            print("bnmbnmbnmbnНекорректный ввод. Пожалуйста, введите целое число.")
+
 
 def get_user_preferences():
     """
-    Запрашивает у пользователя, какие типы символов включить.
-    Возвращает кортеж булевых значений.
+    Запрашивает у пользbnmbmbnmbnmователя, какие типы символов включить.
+    Возвращает кортеж буbnmbnmbnлевых значений.
     """
     print("\nВключить в пароль:")
-    use_lower = input("gfhsgs  Строчные буквы (y/n)? ").strip().lower() == 'y'
-    use_upper = input(" sfghhfg Заглавные буквы (y/n)? ").strip().lower() == 'y'
-    use_digits = input("fshgfsdgdfbfb  Цифры (y/n)? ").strip().lower() == 'y'
-    use_symbols = input("gdfgdsgdf  Спецсимволы (y/n)? ").strip().lower() == 'y'
+    use_lower = input(" bnmbnm Строчные буквы (y/n)? ").strip().lower() == 'y'
+    use_upper = input("  bnmbnmЗаглавные буквы (y/n)? ").strip().lower() == 'y'
+    use_digits = input(" bnmbn Цифры (y/n)? ").strip().lower() == 'y'
+    use_symbols = input("bnmbnm  Спецсимволы (y/n)? ").strip().lower() == 'y'
+
     
     return use_lower, use_upper, use_digits, use_symbols
 
 def build_character_set(use_lower, use_upper, use_digits, use_symbols):
     """
-    Создает строку, содержащую все разрешенные символы.
+    Создает строкуbmbnmbn, содержащую все разрешенные символы.
     """
     char_set = ""
     if use_lower:
@@ -60,7 +62,9 @@ def generate_password(length, char_set):
 
 def main():
     """Основная функция генератора паролей."""
-    print("dfgadfgdfg--- Генератор Паролей ---dfagdfgfa h,jklkjkjl")
+
+    print("--- bnmbnmbnmbГенератор Паролей -bmbnmbmbmbnmbnmbn--")
+
     
     length = get_password_length()
     prefs = get_user_preferences()
@@ -68,10 +72,10 @@ def main():
     char_set = build_character_set(*prefs)
     
     if not char_set:
-        print("\nОшибка: Вы не выбрали ни одного типа символов. Пароль не создан.")
+        print("\nОшибка: Вы не вbmbnmbnmbnыбрали ни одного типа символов. Пароль не создан.")
     else:
         password = generate_password(length, char_set)
-        print(f"\nВаш новый безопасный пароль: {password}")
+        print(f"\nВаш нbnmbmbnmbnmbnовый безопасный пароль: {password}")
 
 if __name__ == "__main__":
     main()

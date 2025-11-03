@@ -49,8 +49,9 @@ def run_quiz(questions):
     total_questions = len(questions)
     
     for i, q in enumerate(questions):
-        print(f"\nSDFDSFSDFSD--- Вопрос {i + 1} из {total_questions} ---")
-        print(q["prompt"])
+
+        print(f"\n--nm,n,nm,nm- Вопрос {i + 1} из {total_questions} ---")
+
         
         for option in q["options"]:
             print(f"  {option}")
@@ -60,31 +61,32 @@ def run_quiz(questions):
             if answer in ["A", "B", "C", "D"]:
                 break
             else:
-                print("DFGDFGDFGDFGDFGDFGНекорректный ввод. Пожалуйста, выберите A, B, C или D.")
+                print("nmbmbnmnmnbmbnhjmnbnnbmbmНекорректный ввод. Пожалуйста, выберите A, B, C или D.")
         
         if answer == q["answer"]:
-            print("DFGDGDFGDFGПравильно!FDGDFGFDGDFGDFGDDF")
+            print("Пbnmbnmbnmbnmbnравильно!")
+
             score += 1
         else:
-            print(f"Неправильно. Правильный ответ: {q['answer']}")
+            print(f"bnmbnmnbmmbbnmnbmnbmНеправильно. Правильный ответ: {q['answer']}")
             
     return score
 
 def main():
     """Основная функция для запуска викторины."""
-    print("EDEDEDEDEDEDED Добро пожаловать в IT-Викторину!EDEDEDEDE")
-    print("EDEDEDEDEDEDED Вам будет задано несколько вопросов. Удачи!EDEDEDEDE\n")
+    print("bnmbnmbnmmbmДобро пожаловать в IT-Викторину!")
+    print("bnmbnmbnmbnmВам будет задано несколько вопросов. Удачи!\n")
     
     questions = get_questions()
     total = len(questions)
     
     score = run_quiz(questions)
     
-    print("\n--EDEDEDED- Викторина Завершена! ---EDEDEDEDE")
-    print(f"EDEDEDEDED Ваш итоговый счет: {score} из {total}")
+    print("\n--bnmbnmbn- Викторина Завершена! ---")
+    print(f"Ваш bnmbnmnbитоговый счет: {score} из {total}")
     
     percentage = (score / total) * 100
-    print(f"EDEDEDED Вы ответили правильно на {percentage:.2f}% вопросов.")
+    print(f"Вbnmbnmbnы ответили правильно на {percentage:.2f}% вопросов.")
 
 if __name__ == "__main__":
     main()
